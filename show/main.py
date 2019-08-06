@@ -1429,7 +1429,7 @@ def ports(portname, verbose):
     cmd = "sonic-cfggen -d --var-json PORT"
 
     if portname is not None:
-        cmd += " {0} {1}".format("--find", portname)
+        cmd += " {0} {1}".format("--key", portname)
 
     run_command(cmd, display_cmd=verbose)
 
@@ -1452,7 +1452,7 @@ def interfaces(interfacename, verbose):
     cmd = "sonic-cfggen -d --var-json INTERFACE"
 
     if interfacename is not None:
-        cmd += " {0} {1}".format("--find", interfacename)
+        cmd += " {0} {1}".format("--key", interfacename)
 
     run_command(cmd, display_cmd=verbose)
 
