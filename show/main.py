@@ -1389,7 +1389,7 @@ def acl(verbose):
 @click.argument('portname', required=False)
 @click.option('--verbose', is_flag=True, help="Enable verbose output")
 def ports(interfacename, verbose):
-    """Show port running configuration"""
+    """Show ports running configuration"""
     cmd = "sonic-cfggen -d --var-json PORT"
 
     if portname is not None:
